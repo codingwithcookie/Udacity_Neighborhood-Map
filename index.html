@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--API KEY: AIzaSyB812DqHFRRhhQRxqki3s5D28erMN8G0UI-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Udacity Neighborhood Map</title>
+	<link rel="stylesheet" href="static/site.css">	
+</head>
+<body>
+    <div class="container">
+        <div class="list">
+            <input placeholder="Search…" type="search" data-bind="value: filter, valueUpdate: 'afterkeydown'" autocomplete="off">
+            <ul data-bind="template: {name:'location', foreach:filteredItems}"></ul>
+            <script type="text/html" id="location">
+                <li>
+                    <h2 data-bind="text: name"></h2>
+                    <p><span data-bind="text: lat"></span>, <span data-bind="text: long"></span></p>
+                    <p>Temp: <span data-bind="text: temp"></span>, <span data-bind="text: description"></span></p>
+                </li>
+            </script>
+        </div>
+        <div class="map" id="map"></div>
+    </div>    
+    <script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>    
+    <script async defer onerror="generateMapError()"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB812DqHFRRhhQRxqki3s5D28erMN8G0UI&v=3&callback=generateMap"></script>    
+    <script src="scripts/data.js" type="text/javascript"></script>
+    <script src="scripts/weather.js" type="text/javascript"></script>
+    <script src="scripts/main.js" type="text/javascript"></script>
+</body>
+</html>
