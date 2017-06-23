@@ -4,7 +4,11 @@ var trailheads = [];
 
 var viewModel = {
     trailheads: ko.observableArray(),
-    filter: ko.observable('')
+    filter: ko.observable(''),
+    openMarker: function(trailhead) 
+    {
+        google.maps.event.trigger(trailhead.marker, 'click');
+    }
 };
 
 function generateMap() {

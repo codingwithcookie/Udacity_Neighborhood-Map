@@ -1,16 +1,17 @@
-html, body {
+html, 
+body {
     margin: 0;
     height: 100%;
     width: 100%;
 }
 
-.container{
+.container {
     margin: 0;
     height: 100%;
     width: 100%;
 }
 
-.list{
+.list {
     margin: 0;
     height: 100%;
     width: 20%;
