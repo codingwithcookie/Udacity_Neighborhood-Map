@@ -3,17 +3,20 @@ html, body {
     height: 100%;
     width: 100%;
 }
+
 .container{
     margin: 0;
     height: 100%;
     width: 100%;
 }
+
 .list{
     margin: 0;
     height: 100%;
     width: 20%;
     float: left;
 }
+
 .map {
     margin: 0;
     height: 100%;
